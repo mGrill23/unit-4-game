@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    //setting variables
+
     var randomTotal = randomNum(19, 120);
 
     var crystal1 = randomNum(1, 12);
@@ -7,6 +9,8 @@ $(document).ready(function () {
     var crystal3 = randomNum(1, 12);
     var crystal4 = randomNum(1, 12);
     var playerTotal = 0;  
+
+    //reading and writing to the dom
     
     $("#total").text(randomTotal);
 
@@ -31,7 +35,7 @@ $(document).ready(function () {
         playerTotal = playerTotal + crystal4;
         $("#player-total").text(playerTotal);
     });
-    
+    //used to determan victory or defeat
     if (playerTotal == randomTotal){
         alert("you win!");
         randomTotal = randomNum(19, 120);
@@ -57,7 +61,7 @@ $(document).ready(function () {
 
     }
     
-    
+    //function to generate random numbers in a range.
     function randomNum(bottom, top) {
         return function() {
             return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
