@@ -64,7 +64,8 @@ $(document).ready(function () {
     //function to generate random numbers in a range.
     function randomNum(bottom, top) {
         return function() {
-            return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
+            var product = Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
+            return product;
         }
     }
 
